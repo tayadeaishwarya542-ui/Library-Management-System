@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Library Management System</h1>
+
+  <!-- Form to add book -->
+  <form id="bookForm" onsubmit="addBook(event)">
+    <input type="text" id="bookName" placeholder="Book Name" required>
+    <input type="text" id="authorName" placeholder="Author Name" required>
+    <button type="submit">Add Book</button>
+  </form>
+
+  <!-- Search input -->
+  <input type="text" id="searchInput" placeholder="Search book by name..." onkeyup="searchBooks()">
+
+  <!-- Table to display books -->
+  <table id="booksTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
